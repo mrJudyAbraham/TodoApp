@@ -81,4 +81,5 @@ return [
         'validate_csrf_token' => Illuminate\Foundation\Http\Middleware\ValidateCsrfToken::class,
     ],
 
+    'token' => env(key:'OUR_API_TOKEN'),
 ];

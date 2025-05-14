@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todo;
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class TodosApiController extends Controller
 {
     public function index(){
-        $todos = auth()->user()->todos()->get();
+        $todos = auth()->guard()->user()->todos()->get();  // fixed as per the instruction from copilot by using guard() method
+        // $todos = auth()->user()->todos()->get(); // this line was incorrect as per the instruction from copilot
 
         return response()->json([
             'todos' => $todos,
@@ -21,7 +21,8 @@ class TodosApiController extends Controller
             'title' => 'required|string|max:255',
         ]);
 
-        $todo = auth()->user()->todos()->create([
+        $todo = auth()->guard()->user()->todos()->create([          // fixed as per the instruction from copilot by using guard() method
+            // $todo = auth()->user()->todos()->create([ // this line was incorrect as per the instruction from copilot
             'title' => $request->input(key: 'title'),
         ]);
 
@@ -31,7 +32,7 @@ class TodosApiController extends Controller
     }
 
     public function update(Request $request, Todo $todo){
-        $request->calidate([
+        $request->validate([
             'completed' => 'required|boolean',
         ]);
 
