@@ -100,7 +100,7 @@ class ChatComponent extends Component
             });
 
         $stream = Prism::text()
-            ->using(Provider::OpenAI, 'gpt-4o')
+            ->using(Provider::Gemini, 'gemini-2.0-flash')
             ->withMaxSteps(2)
             ->withPrompt($prompt)
             ->withTools([$todoTool])

@@ -25,7 +25,7 @@
                             </p>
                         </div>
                         <span class="block text-xs mt-1 text-gray-400 text-left">
-                            AI
+                            Gemini
                         </span>
                     </div>
                 </div>
