@@ -37,7 +37,10 @@ Gemini AI is used to assist users with:
 
 Gemini requests are handled through a custom Laravel service class or API middleware.
 
+![App Preview](public/images/1.png)
+
 ---
+
 
 ## ⚡ Livewire in Action
 
@@ -49,14 +52,8 @@ Livewire powers all user interactions for an app-like experience without writing
 
 Task updates, creation, and deletions are handled via Livewire events and state binding.
 
+![App Preview](public/images/3.png)
+
+![App Preview](public/images/4.png)
+
 ---
-
-## 🌈 PrismPHP Usage
-
-[PrismPHP](https://github.com/PrismJS/prism) is used to render syntax-highlighted code blocks, ideal for users managing code-based tasks, notes, or documentation within the app.
-
-```php
-$task = Task::create([
-    'title' => 'Deploy project',
-    'description' => 'Run php artisan migrate --force',
-]);
